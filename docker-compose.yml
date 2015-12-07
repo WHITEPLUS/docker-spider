@@ -1,0 +1,11 @@
+core:
+  container_name: spider_core
+  build: ./20151207
+  links:
+    - cache:cache
+  dns:
+    - 8.8.8.8
+    - 8.8.4.4
+cache:
+  container_name: spider_cache
+  image: redis:2.8
